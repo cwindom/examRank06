@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cwindom/Desktop/examRank06/main.cpp
+string.h
+-
+unistd.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
