@@ -6,8 +6,7 @@
 #include <stdio.h>
 
 int id[64 * 1024];
-int max = 0;
-int next_id = 0;
+int max = 0, next_id = 0;
 fd_set active, readyRead, readyWrite;
 char bufRead[42*4096], str[42*4096], bufWrite[42*4097];
 void fatal_error()
@@ -17,9 +16,8 @@ void fatal_error()
 }
 void send_all(int es) {
     for (int i = 0; i <= max; i++)
-        if (FD_ISSET(i, &readyWrite) && i != es) {
+        if (FD_ISSET(i, &readyWrite) && i != es)
             send(i, bufWrite, strlen(bufWrite), 0);
-        }
 }
 int main(int ac, char **av) {
     if (ac != 2) {
@@ -58,7 +56,7 @@ int main(int ac, char **av) {
         for (int s = 0; s <= max; s++) {
 
             if (FD_ISSET(s, &readyRead) && s == serverSock) {
-                int clientSock = accept(serverSock, (struct sockaddr *)&addr, &addr_len);\
+                int clientSock = accept(serverSock, (struct sockaddr *)&addr, &addr_len);
                 if (clientSock < 0)
                 continue ;
 
@@ -96,5 +94,4 @@ int main(int ac, char **av) {
             }
         }
     }
-    return (0);
 }
