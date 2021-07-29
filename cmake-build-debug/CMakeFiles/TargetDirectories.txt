@@ -1,3 +1,0 @@
-/Users/cwindom/Desktop/examRank06/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/cwindom/Desktop/examRank06/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/cwindom/Desktop/examRank06/cmake-build-debug/CMakeFiles/examRank06.dir
